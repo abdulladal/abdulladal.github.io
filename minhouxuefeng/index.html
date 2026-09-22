@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闽侯雪峰山-福州周边生态旅游与佛教文化圣地指南</title>
+    <meta name="description" content="本站为您提供闽侯雪峰山旅游攻略、雪峰寺历史介绍、生态徒步路线及佛国风光欣赏。了解福州雪峰山旅游的最佳季节、交通方式及特色美食，规划您的周末休闲之旅。">
+    <meta name="keywords" content="闽侯雪峰山, 福州雪峰山, 雪峰寺, 雪峰山旅游, 福州周边游, 闽侯旅游">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2E5D4B; /* 森林绿 */
+            --secondary-color: #8C6B4B; /* 木质色 */
+            --accent-color: #D4A373; /* 金色点缀 */
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #F9F9F7;
+            --white: #FFFFFF;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 0.5rem auto 0;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .cta-btn:hover {
+            background-color: #244a3a;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/xuefeng_mountain/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .about-image img {
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h4 {
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Attractions Section */
+        .attractions {
+            padding: 5rem 0;
+        }
+
+        .attraction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .attraction-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .attraction-img {
+            height: 200px;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .attraction-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .attraction-card:hover .attraction-img img {
+            transform: scale(1.05);
+        }
+
+        .attraction-content {
+            padding: 1.5rem;
+        }
+
+        .attraction-tag {
+            display: inline-block;
+            background-color: #e8f5e9;
+            color: var(--primary-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .attraction-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .attraction-content p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .attraction-link {
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Guide Section */
+        .guide {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .guide-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 3rem;
+        }
+
+        .guide-steps::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #eee;
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--white);
+            box-shadow: 0 0 0 2px #eee;
+        }
+
+        .step-item h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .step-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .faq-question:hover {
+            background-color: #f8f8f8;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-steps {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .guide-steps::before {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>雪峰山</span>旅游指南
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="active">关于雪峰</a></li>
+                    <li><a href="#attractions">景点推荐</a></li>
+                    <li><a href="#guide">游玩攻略</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#guide" class="cta-btn">开始规划</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>探秘闽侯雪峰山</h1>
+                <p>福州后花园，千年古刹与自然生态的完美融合。在这里，您可以远离城市喧嚣，感受雪峰寺的禅意宁静，呼吸森林的清新空气。</p>
+                <div class="hero-buttons">
+                    <a href="#attractions" class="btn btn-primary">浏览景点</a>
+                    <a href="#guide" class="btn btn-outline">查看攻略</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>雪峰山简介</h2>
+                    <p>了解雪峰山的地理、历史与文化底蕴</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>福州西部的生态明珠</h3>
+                        <p>闽侯雪峰山位于福建省福州市闽侯县，主峰海拔1000米以上，素有“八闽首刹”之称。这里山峦叠翠，云雾缭绕，不仅是福州周边著名的避暑胜地，更是佛教文化的重要发源地。</p>
+                        <p>雪峰山气候温润，四季分明。春天山花烂漫，夏天绿意盎然，秋天层林尽染，冬天银装素裹。山中不仅有秀丽的自然风光，更坐落着始建于唐代的雪峰崇圣寺，是南方佛教的重要中心之一。</p>
+                        <a href="#" class="attraction-link">了解更多关于雪峰寺的历史 &rarr;</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://picsum.photos/seed/xuefeng_temple/600/400.jpg" alt="雪峰寺全景">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>旅游特色</h2>
+                    <p>为什么选择雪峰山作为您的休闲目的地</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h4>生态氧吧</h4>
+                        <p>森林覆盖率极高，空气中负氧离子含量丰富，是天然的大氧吧，非常适合徒步和养生。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏯</div>
+                        <h4>千年古刹</h4>
+                        <p>雪峰崇圣寺历史悠久，香火鼎盛，建筑宏伟，是体验禅宗文化和祈福许愿的绝佳去处。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⛰️</div>
+                        <h4>登山徒步</h4>
+                        <p>多条成熟的登山步道，难度适中，沿途可欣赏瀑布、怪石和奇花异草，适合家庭出游。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🍜</div>
+                        <h4>特色美食</h4>
+                        <p>品尝地道的闽侯农家菜，如雪峰笋干、土鸡煲、山野菜等，感受淳朴的乡村风味。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="attractions">
+            <div class="container">
+                <div class="section-title">
+                    <h2>热门景点</h2>
+                    <p>雪峰山不可错过的打卡胜地</p>
+                </div>
+                <div class="attraction-grid">
+                    <article class="attraction-card">
+                        <div class="attraction-img">
+                            <img src="https://picsum.photos/seed/xuefeng_temple2/400/300.jpg" alt="雪峰崇圣寺">
+                        </div>
+                        <div class="attraction-content">
+                            <span class="attraction-tag">文化古迹</span>
+                            <h4>雪峰崇圣寺</h4>
+                            <p>福州最大的佛教寺院之一，寺内古木参天，环境清幽，是游客必到之地。</p>
+                            <a href="#" class="attraction-link">查看详情</a>
+                        </div>
+                    </article>
+                    <article class="attraction-card">
+                        <div class="attraction-img">
+                            <img src="https://picsum.photos/seed/forest_path/400/300.jpg" alt="登山步道">
+                        </div>
+                        <div class="attraction-content">
+                            <span class="attraction-tag">自然风光</span>
+                            <h4>登山步道</h4>
+                            <p>蜿蜒曲折的林间步道，空气清新，适合晨练和亲子徒步，沿途风景如画。</p>
+                            <a href="#" class="attraction-link">查看详情</a>
+                        </div>
+                    </article>
+                    <article class="attraction-card">
+                        <div class="attraction-img">
+                            <img src="https://picsum.photos/seed/waterfall/400/300.jpg" alt="雪峰瀑布">
+                        </div>
+                        <div class="attraction-content">
+                            <span class="attraction-tag">自然风光</span>
+                            <h4>雪峰瀑布</h4>
+                            <p>清澈的溪流从山间倾泻而下，水声潺潺，是夏日避暑玩水的好去处。</p>
+                            <a href="#" class="attraction-link">查看详情</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide">
+            <div class="container">
+                <div class="section-title">
+                    <h2>游玩攻略</h2>
+                    <p>从交通到美食，一站式实用指南</p>
+                </div>
+                <div class="guide-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h4>交通指南</h4>
+                        <p>自驾导航至“闽侯雪峰山”，福州市区出发约1.5小时车程。也可乘坐地铁至甘蔗站后转乘旅游专线或出租车。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h4>最佳季节</h4>
+                        <p>春秋两季是最佳游览时间。春季山花盛开，秋季天高气爽。夏季凉爽，但需注意防晒和防蚊。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h4>行程安排</h4>
+                        <p>建议安排半日到一天的行程。上午游览雪峰寺，中午品尝农家菜，下午徒步登山或参观周边景点。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container faq-container">
+                <div class="section-title">
+                    <h2>常见问题</h2>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">雪峰山需要门票吗？</div>
+                    <div class="faq-answer">
+                        雪峰山景区内的登山步道和自然景观免费开放。进入雪峰崇圣寺参观需购买香火券或寺院门票，价格公道。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">那里有住宿的地方吗？</div>
+                    <div class="faq-answer">
+                        山脚下和附近村落有多家农家乐和民宿，提供简单的住宿和餐饮服务。如果想体验更安静的夜晚，建议提前预订。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">带小孩子去方便吗？</div>
+                    <div class="faq-answer">
+                        非常方便。雪峰山景区步道平坦，坡度不大，非常适合家庭亲子游。但需注意看管好孩子，注意安全。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">停车方便吗？</div>
+                    <div class="faq-answer">
+                        景区设有大型停车场，车位充足，自驾游客停车非常便利。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>闽侯雪峰山旅游指南</h3>
+                    <p>致力于为游客提供最准确、最实用的雪峰山旅游信息。探索福州周边的自然之美，感受千年古刹的宁静致远。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#attractions">景点介绍</a></li>
+                        <li><a href="#guide">旅游攻略</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>景点分类</h4>
+                    <ul>
+                        <li><a href="#">雪峰寺</a></li>
+                        <li><a href="#">登山步道</a></li>
+                        <li><a href="#">自然风光</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>地址：福建省福州市闽侯县雪峰山景区</li>
+                        <li>电话：0591-xxxxxxx</li>
+                        <li>邮箱：contact@example.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 闽侯雪峰山旅游指南. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
