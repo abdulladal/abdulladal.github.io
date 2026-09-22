@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="电影危险人物专题页，深度解析银幕上那些令人胆寒的反派角色、罪犯形象及心理恐怖角色，提供角色档案、经典台词与影评分析。">
+    <meta name="keywords" content="电影危险人物,银幕反派,罪犯角色,心理惊悚电影,电影角色分析">
+    <title>电影危险人物-银幕反派的深度档案与经典形象解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-red: #ff3b30;
+            --accent-gold: #d4af37;
+            --border-color: #333;
+            --font-serif: "Songti SC", "SimSun", "Times New Roman", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 15, 17, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-red);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-red);
+        }
+
+        .search-icon {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://picsum.photos/seed/crimson/1920/1080');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.4);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: var(--accent-red);
+            color: white;
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            border-radius: 2px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-red);
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d63026;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--text-main);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: 5px;
+            width: 4px;
+            background-color: var(--accent-red);
+        }
+
+        .view-all {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .view-all:hover {
+            color: var(--accent-red);
+        }
+
+        /* Character Grid */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--border-color);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            height: 360px;
+            overflow: hidden;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            backdrop-filter: blur(4px);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-family: var(--font-serif);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #2a2a2e;
+            padding-top: 15px;
+        }
+
+        .rating {
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+        }
+
+        /* Featured Article */
+        .featured-article {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-content h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .featured-content p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        /* Analysis List */
+        .analysis-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .analysis-item {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .analysis-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-family: var(--font-serif);
+        }
+
+        .analysis-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 4rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            display: none;
+            padding-top: 10px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-red);
+        }
+
+        .footer-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            max-width: 300px;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+            padding-top: 30px;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 2.5rem; }
+            .featured-article { grid-template-columns: 1fr; }
+            .featured-img { min-height: 250px; }
+            .analysis-list { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            nav ul { display: none; }
+            .hero { height: 400px; }
+            .hero h1 { font-size: 2rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .grid-4 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>★</span> 危险档案
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">深度分析</a></li>
+                    <li><a href="#">角色图鉴</a></li>
+                    <li><a href="#">影评专栏</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <span class="tag">深度专题</span>
+                <h1>电影危险人物：<br>银幕阴影下的心理博弈</h1>
+                <p>从冷酷无情的杀手到扭曲变态的反派，我们深入剖析那些令人难忘的银幕恶徒。不仅是恐惧的化身，更是人性深渊的隐喻。</p>
+                <div>
+                    <a href="#featured" class="btn">阅读深度专题</a>
+                    <a href="#characters" class="btn btn-outline">浏览角色图鉴</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Featured Article -->
+            <section id="featured">
+                <div class="section-header">
+                    <h2 class="section-title">深度解析：反派角色的艺术</h2>
+                    <a href="#" class="view-all">查看更多文章 &rarr;</a>
+                </div>
+                <article class="featured-article">
+                    <img src="https://picsum.photos/seed/psychology/800/600" alt="心理惊悚电影海报" class="featured-img">
+                    <div class="featured-content">
+                        <span class="tag">影评专栏</span>
+                        <h2>为什么我们会被“坏”人吸引？<br>论电影中反派角色的魅力构建</h2>
+                        <p>在电影艺术中，英雄往往千篇一律，而反派却各具特色。真正的危险人物不仅仅是作恶的工具，他们拥有复杂的动机、独特的魅力和令人窒息的压迫感。本文将探讨经典反派如何通过台词、行为逻辑和视觉符号来打破观众的道德防线。</p>
+                        <a href="#" class="btn btn-outline" style="border-color: var(--text-main); color: var(--text-main);">阅读全文</a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Character Grid -->
+            <section id="characters">
+                <div class="section-header">
+                    <h2 class="section-title">经典角色档案</h2>
+                    <a href="#" class="view-all">查看完整榜单 &rarr;</a>
+                </div>
+                <div class="grid-4">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/joker/400/600" alt="小丑" class="card-img">
+                            <span class="card-badge">心理惊悚</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span>2019</span>
+                                <span>剧情 / 犯罪</span>
+                            </div>
+                            <h3>亚瑟·弗莱克 / 小丑</h3>
+                            <p>哥谭市的混乱催化剂，通过荒诞的表演和无序的暴力，揭露了社会对边缘人的冷漠。</p>
+                            <div class="card-footer">
+                                <span class="rating">★★★★★</span>
+                                <a href="#" style="font-size:0.9rem; color:var(--accent-red);">档案详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/hannibal/400/600" alt="汉尼拔" class="card-img">
+                            <span class="card-badge">悬疑</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span>2001</span>
+                                <span>惊悚 / 惊悚</span>
+                            </div>
+                            <h3>汉尼拔·莱克特</h3>
+                            <p>优雅、博学且极度危险的食人魔，他的智力远超所有猎手，是心理博弈的巅峰。</p>
+                            <div class="card-footer">
+                                <span class="rating">★★★★★</span>
+                                <a href="#" style="font-size:0.9rem; color:var(--accent-red);">档案详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/anton/400/600" alt="安东·齐格" class="card-img">
+                            <span class="card-badge">西部片</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span>2007</span>
+                                <span>西部 / 剧情</span>
+                            </div>
+                            <h3>安东·齐格</h3>
+                            <p>沉默寡言的赏金猎人，信奉“上帝之手”的教义，杀人如割草般冷静且充满仪式感。</p>
+                            <div class="card-footer">
+                                <span class="rating">★★★★☆</span>
+                                <a href="#" style="font-size:0.9rem; color:var(--accent-red);">档案详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://picsum.photos/seed/norman/400/600" alt="诺曼·贝茨" class="card-img">
+                            <span class="card-badge">恐怖片</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span>1960</span>
+                                <span>恐怖 / 惊悚</span>
+                            </div>
+                            <h3>诺曼·贝茨</h3>
+                            <p>母爱的扭曲与分裂，饭店老板外表下的连环杀手，恐惧往往源于最亲密的人。</p>
+                            <div class="card-footer">
+                                <span class="rating">★★★★★</span>
+                                <a href="#" style="font-size:0.9rem; color:var(--accent-red);">档案详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Analysis List -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">危险类型分析</h2>
+                </div>
+                <div class="analysis-list">
+                    <div class="analysis-item">
+                        <h3>冷血杀手</h3>
+                        <p>这类人物通常没有道德底线，杀人只是为了快感或金钱。他们代表了人类最原始的暴力冲动，如《七宗罪》中的杀手。</p>
+                        <a href="#" style="color:var(--accent-red); font-size:0.9rem;">更多分析 &rarr;</a>
+                    </div>
+                    <div class="analysis-item">
+                        <h3>心理变态者</h3>
+                        <p>高智商、情感缺失，善于伪装。他们利用自己的聪明才智操控他人，如《沉默的羔羊》中的汉尼拔。</p>
+                        <a href="#" style="color:var(--accent-red); font-size:0.9rem;">更多分析 &rarr;</a>
+                    </div>
+                    <div class="analysis-item">
+                        <h3>社会反叛者</h3>
+                        <p>出于对现有秩序的不满而进行破坏，往往带有某种“哲学”或“革命”色彩，如《小丑》中的亚瑟。</p>
+                        <a href="#" style="color:var(--accent-red); font-size:0.9rem;">更多分析 &rarr;</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题</h2>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">电影中的“危险人物”通常具备哪些特征？</div>
+                    <div class="faq-answer">
+                        <p>通常具备高智商、极强的心理控制能力、独特的个人魅力或令人恐惧的暴力手段。他们往往打破了传统的善恶二元对立，具有复杂的动机。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何区分“反派”与单纯的“恶人”？</div>
+                    <div class="faq-answer">
+                        <p>反派通常在电影中占据重要篇幅，拥有令人信服的背景故事和逻辑闭环，甚至能让部分观众产生共鸣或敬畏。单纯的恶人则往往只是作恶的工具。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">哪里可以找到关于犯罪心理学的深度影评？</div>
+                    <div class="faq-answer">
+                        <p>本站专门提供关于犯罪、悬疑和心理惊悚电影的深度解析专栏，帮助观众从心理学角度理解银幕上的危险人物。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 20px; display:inline-block;">
+                        <span>★</span> 危险档案
+                    </a>
+                    <p class="footer-desc">
+                        致力于探索电影艺术中关于“危险”的边界。我们分析反派角色的心理构建，解读经典银幕形象，为您提供最专业的电影人物档案。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>栏目导航</h4>
+                    <ul>
+                        <li><a href="#">深度影评</a></li>
+                        <li><a href="#">角色图鉴</a></li>
+                        <li><a href="#">经典台词</a></li>
+                        <li><a href="#">恐怖电影指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>类型分类</h4>
+                    <ul>
+                        <li><a href="#">心理惊悚</a></li>
+                        <li><a href="#">犯罪剧情</a></li>
+                        <li><a href="#">西部片</a></li>
+                        <li><a href="#">恐怖电影</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">编辑团队</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 电影危险人物专题网. All Rights Reserved. 本站内容仅供学习交流使用。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                item.querySelector('.faq-question').addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                      </html>
