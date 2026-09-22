@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>被诅咒的王子-奇幻史诗与暗黑神话在线阅读平台</title>
+    <meta name="description" content="被诅咒的王子专题站，汇集暗黑奇幻、神话传说、禁忌之恋等题材的漫画与小说作品。提供高清连载更新、角色图鉴、剧情解析及同人创作社区。">
+    <meta name="keywords" content="被诅咒的王子, 暗黑漫画, 奇幻小说, 神话故事, 在线阅读, 漫画推荐">
+    <style>
+        :root {
+            --bg-color: #0f0f13;
+            --card-bg: #1a1a24;
+            --text-main: #e0e0e0;
+            --text-sub: #a0a0b0;
+            --accent: #9d4edd;
+            --accent-glow: rgba(157, 78, 221, 0.4);
+            --border: #2d2d3d;
+            --nav-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background: rgba(15, 15, 19, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent-glow);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .search-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(to bottom, rgba(15, 15, 19, 0.3), var(--bg-color)), 
+                        url('https://picsum.photos/seed/darkkingdom/1920/1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            border-radius: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            color: var(--text-sub);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            background: #7b2cbf;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-main);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 5%;
+        }
+
+        /* Section Title */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .section-more {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* Grid System */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Card Style */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .card-cover {
+            height: 380px;
+            width: 100%;
+            background-color: #2a2a35;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-cover img {
+            transform: scale(1.05);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .play-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-category {
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        /* Featured Layout */
+        .featured-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .featured-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .featured-img {
+            width: 40%;
+            height: 100%;
+            min-height: 300px;
+        }
+
+        .featured-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 30px;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 193, 7, 0.15);
+            color: #ffc107;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            width: fit-content;
+        }
+
+        /* List Style for Sidebar */
+        .rank-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .rank-item:hover {
+            background: rgba(255,255,255,0.05);
+        }
+
+        .rank-num {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--text-sub);
+            width: 25px;
+            text-align: center;
+        }
+
+        .rank-num.top-1 { color: #ffd700; }
+        .rank-num.top-2 { color: #c0c0c0; }
+        .rank-num.top-3 { color: #cd7f32; }
+
+        .rank-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+
+        .rank-info span {
+            font-size: 0.75rem;
+            color: var(--text-sub);
+        }
+
+        /* Character Section */
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .char-avatar {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--border);
+            margin-bottom: 10px;
+            transition: border-color 0.3s;
+        }
+
+        .char-avatar:hover {
+            border-color: var(--accent);
+        }
+
+        .char-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .char-name {
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0e;
+            padding: 50px 5% 20px;
+            border-top: 1px solid var(--border);
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-sub);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 20px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                height: 400px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero-content {
+                padding: 0 10px;
+            }
+
+            .cta-group {
+                justify-content: center;
+            }
+
+            .featured-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-card {
+                flex-direction: column;
+            }
+
+            .featured-img {
+                width: 100%;
+                height: 200px;
+            }
+
+            .featured-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>暗夜图鉴</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">首页</a>
+            <a href="#">热门连载</a>
+            <a href="#">完结神作</a>
+            <a href="#">角色图鉴</a>
+            <a href="#">同人专区</a>
+        </nav>
+        <button class="search-btn">搜索</button>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-tag">年度重磅推荐</span>
+                <h1>被诅咒的王子：深渊的觉醒</h1>
+                <p>当王国的荣光被诅咒吞噬，被放逐的王子必须在绝望的深渊中寻找重生的力量。一部融合暗黑奇幻与人性救赎的史诗巨作。</p>
+                <div class="cta-group">
+                    <button class="btn btn-primary">立即阅读</button>
+                    <button class="btn btn-outline">加入书架</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Content -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">本周必读</h2>
+                <a href="#" class="section-more">查看全部 &rarr;</a>
+            </div>
+            <div class="featured-layout">
+                <article class="featured-card">
+                    <div class="featured-img">
+                        <img src="https://picsum.photos/seed/prince1/600/400" alt="被诅咒的王子封面">
+                    </div>
+                    <div class="featured-content">
+                        <span class="rating-badge">★ 9.8</span>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 10px;">被诅咒的王子：第一卷</h3>
+                        <p style="color: var(--text-sub); margin-bottom: 20px; font-size: 0.95rem;">
+                            故事发生在被永恒迷雾笼罩的艾尔西亚王国。年轻的王子因为一次祭祀仪式的意外，觉醒了能够操控阴影的诅咒之力。为了解除诅咒并夺回失去的王位，他必须踏上一段充满背叛与牺牲的旅程。
+                        </p>
+                        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                            <span style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 2px; font-size: 0.8rem;">暗黑奇幻</span>
+                            <span style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 2px; font-size: 0.8rem;">王子复仇</span>
+                            <span style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 2px; font-size: 0.8rem;">高燃剧情</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: fit-content;">开始阅读</button>
+                    </div>
+                </article>
+
+                <aside>
+                    <div class="section-header" style="margin-bottom: 15px;">
+                        <h3 style="font-size: 1.2rem;">热门榜单</h3>
+                    </div>
+                    <div class="rank-list">
+                        <div class="rank-item">
+                            <span class="rank-num top-1">1</span>
+                            <div class="rank-info">
+                                <h4><a href="#">深渊之瞳</a></h4>
+                                <span>3.2万人追更</span>
+                            </div>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-num top-2">2</span>
+                            <div class="rank-info">
+                                <h4><a href="#">最后的骑士</a></h4>
+                                <span>2.8万人追更</span>
+                            </div>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-num top-3">3</span>
+                            <div class="rank-info">
+                                <h4><a href="#">影之契约</a></h4>
+                                <span>2.1万人追更</span>
+                            </div>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-num">4</span>
+                            <div class="rank-info">
+                                <h4><a href="#">龙血战记</a></h4>
+                                <span>1.9万人追更</span>
+                            </div>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-num">5</span>
+                            <div class="rank-info">
+                                <h4><a href="#">星界边境</a></h4>
+                                <span>1.7万人追更</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Categories Grid -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">分类浏览</h2>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/curse1/400/600" alt="诅咒题材漫画">
+                        <div class="card-overlay">
+                            <div class="play-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-category">诅咒题材</div>
+                        <h3 class="card-title">禁忌的仪式</h3>
+                        <div class="card-meta">
+                            <span>更新至 128话</span>
+                            <span>9.5分</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/prince2/400/600" alt="王子题材小说">
+                        <div class="card-overlay">
+                            <div class="play-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-category">奇幻小说</div>
+                        <h3 class="card-title">流亡王子的逆袭</h3>
+                        <div class="card-meta">
+                            <span>已完结</span>
+                            <span>9.2分</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-cover">
+                        <img src="https://picsum.photos/seed/kingdom/400/600" alt="暗黑史诗">
+                        <div class="card-overlay">
+                            <div class="play-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-category">史诗战争</div>
+                        <h3 class="card-title">王座崩塌之时</h3>
+                        <div class="card-meta">
+                            <span>连载中</span>
+                            <span>8.9分</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Character Section -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">主要角色</h2>
+            </div>
+            <div class="character-grid">
+                <div class="char-card">
+                    <div class="char-avatar">
+                        <img src="https://picsum.photos/seed/char1/300/300" alt="亚瑟王子">
+                    </div>
+                    <div class="char-name">亚瑟·冯·希尔</div>
+                    <div style="font-size: 0.8rem; color: var(--text-sub);">被诅咒的王子</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-avatar">
+                        <img src="https://picsum.photos/seed/char2/300/300" alt="莉莉丝">
+                    </div>
+                    <div class="char-name">莉莉丝</div>
+                    <div style="font-size: 0.8rem; color: var(--text-sub);">暗影女巫</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-avatar">
+                        <img src="https://picsum.photos/seed/char3/300/300" alt="凯尔将军">
+                    </div>
+                    <div class="char-name">凯尔</div>
+                    <div style="font-size: 0.8rem; color: var(--text-sub);">忠诚骑士</div>
+                </div>
+                <div class="char-card">
+                    <div class="char-avatar">
+                        <img src="https://picsum.photos/seed/char4/300/300" alt="黑龙">
+                    </div>
+                    <div class="char-name">尼德霍格</div>
+                    <div style="font-size: 0.8rem; color: var(--text-sub);">远古守护兽</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container" style="margin-bottom: 50px;">
+            <div class="section-header">
+                <h2 class="section-title">阅读指南</h2>
+            </div>
+            <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 30px;">
+                <details style="margin-bottom: 15px; cursor: pointer;">
+                    <summary style="font-weight: bold; color: var(--text-main); padding: 10px 0;">《被诅咒的王子》更新频率是怎样的？</summary>
+                    <p style="color: var(--text-sub); padding: 10px 0 0 0;">本作品目前每周一、四晚 20:00 更新一话，节假日可能会顺延，请关注站内公告。</p>
+                </details>
+                <details style="margin-bottom: 15px; cursor: pointer;">
+                    <summary style="font-weight: bold; color: var(--text-main); padding: 10px 0;">是否支持移动端阅读？</summary>
+                    <p style="color: var(--text-sub); padding: 10px 0 0 0;">完全支持。您可以使用手机浏览器访问本站，或下载我们的官方 APP，享受丝滑的漫画阅读体验。</p>
+                </details>
+                <details style="margin-bottom: 15px; cursor: pointer;">
+                    <summary style="font-weight: bold; color: var(--text-main); padding: 10px 0;">漫画与小说有什么区别？</summary>
+                    <p style="color: var(--text-sub); padding: 10px 0 0 0;">漫画侧重于视觉冲击和分镜叙事，适合喜欢快速阅读的读者；小说则包含更丰富的心理描写和世界观设定，适合深度沉浸的读者。</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">平台介绍</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">版权声明</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>分类浏览</h4>
+                <ul>
+                    <li><a href="#">暗黑奇幻</a></li>
+                    <li><a href="#">王子传说</a></li>
+                    <li><a href="#">神话解构</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">用户反馈</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">联系客服</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <ul>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">微博话题</a></li>
+                    <li><a href="#">Discord社区</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 暗夜图鉴阅读平台. All Rights Reserved. 本站内容仅供学习交流，请勿用于商业用途。
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                  </html>
